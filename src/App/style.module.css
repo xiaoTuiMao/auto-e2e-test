@@ -1,0 +1,47 @@
+.actionBox {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.actionBox input {
+  width: 200px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 2px solid #eee;
+}
+
+.actionBox div, .todoListBox li div {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #1890ff;
+  color: #fff;
+}
+
+.todoListBox {
+  padding: 50px;
+
+}
+.todoListBox li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.todoListBox p {
+  font-size: 14px;
+  margin-left: 10px;
+}
+.todoListBox li div {
+  background-color: red;
+}
