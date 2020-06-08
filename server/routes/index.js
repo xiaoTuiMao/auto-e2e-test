@@ -7,7 +7,7 @@ const fetch = require('axios');
 const router = express.Router();
 
 const readFile = util.promisify(fs.readFile);
-const DATA_FILE_PATH = path.resolve(__dirname, '../data/record.txt');
+const DATA_FILE_PATH = path.resolve(__dirname, '../../data/record.txt');
 
 /* GET home page. */
 router.get('/', (req, res) => {

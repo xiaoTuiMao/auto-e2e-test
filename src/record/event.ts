@@ -24,21 +24,21 @@ export const clickEvent = (dataControl: DataControl, rootDom: HTMLElement) => {
     if (dataControl.recordData.recordSDK.status === 'unStart' || dataControl.recordData.recordSDK.status === 'end') {
       return;
     }
-    console.log(e);
+    const viewId = findViewPath(e.target as HTMLElement);
     if (e.target.tagName === 'INPUT') {
       const fn = () => {
-        console.log(e.target.value);
+        dataControl.pushData('page', {
+          event: 'input',
+          viewId,
+          snapshot: e.target.value,
+        });
         e.target.removeEventListener('blur', fn);
       };
       e.target.addEventListener('blur', fn);
-      e.target.addEventListener('change', () => {
-        console.log(1222);
-      });
       return;
     }
     // TODO:且要触发的节点是有插入ID的才记录
     // viewId 要替换成插入的 ID
-    const viewId = findViewPath(e.target as HTMLElement);
 
     const index = dataControl.pushData('page', {
       event: 'click',

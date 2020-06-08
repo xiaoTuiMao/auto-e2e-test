@@ -20,7 +20,7 @@ const KNB = {
 };
 
 interface PageCaseItem {
-  event: 'load' | 'click' | 'scroll' | 'leave';
+  event: 'load' | 'click' | 'scroll' | 'leave' | 'input';
   snapshot: any;
   expendTime: number;
   snapshotType: 'all' | 'diff' | '';

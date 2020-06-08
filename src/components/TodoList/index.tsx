@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import style from './style.module.css';
 
-const Page = () => {
-  const [todoList, setTodoList] = useState([]);
-  const [todo, setTodo] = useState('');
+const Page = (): React.ReactElement => {
+  const [todoList, setTodoList] = useState<string[]>([]);
+  const [todo, setTodo] = useState<string>('');
   return (
     <div>
       <div className={style.actionBox}>
         <input
           value={todo}
-          onChange={(e) => {
+          onChange={(e): void => {
             setTodo(e.target.value);
           }}
         />
